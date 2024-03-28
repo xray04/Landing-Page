@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="slogan">
+    <h1>Masters Computer</h1>
+  </div>
+
+  <div id="logo-container">
+    <img id="logo" src="Images\Masters.png" alt="" srcset="">
+  </div>
+
+  <div class="firscl">
+
+    <button id="downloadButton" class="btn">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Contact
+    </button>
+    <br>
+    <br>
+    <br>
+    <a href="#" id="facebook-link">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Facebook
+    </a>
+
+
+  </div>
+
+
+
+  <div class="secondcl">
+    <a href="#" id="instagram-link">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Insta
+    </a>
+    <br>
+    <br>
+    <br>
+    <a href="mailto:mastercomputer.used@gmail.com">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Email
+    </a>
+  </div>
+
+
+
+  <script>
+    // Contact infor integration
+    function downloadVCard() {
+      var vCardContent = "BEGIN:VCARD\n";
+      vCardContent += "VERSION:3.0\n";
+      vCardContent += "FN;CHARSET=UTF-8:Abdulrahman Hazhar\n";
+      vCardContent += "N;CHARSET=UTF-8:Hazhar;Abdulrahman;;;\n";
+      vCardContent += "GENDER:M\n";
+      vCardContent += "EMAIL;CHARSET=UTF-8;type=WORK,INTERNET:mastercomputer.used@gmail.com\n";
+      vCardContent += "TEL;TYPE=WORK,VOICE:+9647508240834\n";
+      vCardContent += "ADR;CHARSET=UTF-8;TYPE=WORK:;;Sultan Muthafar;Erbil;Iraq;44001;\n";
+      vCardContent += "TITLE;CHARSET=UTF-8:Business Owner\n";
+      vCardContent += "ORG;CHARSET=UTF-8:Masters Computer\n";
+      vCardContent += "NOTE;CHARSET=UTF-8:Masters Computer for buying and selling of used and refurbished computers while providing software services\n";
+      vCardContent += "REV:2024-03-27T19:02:19.964Z\n";
+      vCardContent += "END:VCARD";
+
+      var blob = new Blob([vCardContent], { type: "text/vcard" });
+      var url = window.URL.createObjectURL(blob);
+
+      var a = document.createElement("a");
+      a.style.display = "none";
+      a.href = url;
+      a.download = "contact.vcf";
+      document.body.appendChild(a);
+      a.click();
+      window.URL.revokeObjectURL(url);
+    }
+
+    // Add event listener to the button
+    document.getElementById("downloadButton").addEventListener("click", downloadVCard);
+
+
+    // instagram script
+    document.addEventListener("DOMContentLoaded", function () {
+      var instagramLink = document.getElementById('instagram-link');
+      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent)) {
+        // Redirect to Instagram app for mobile users
+        instagramLink.addEventListener('click', function (event) {
+          event.preventDefault();
+          window.location.href = 'instagram://user?username=masters._.computer';
+        });
+      } else {
+        // Redirect to Instagram web for desktop users
+        instagramLink.setAttribute('href', 'https://www.instagram.com/masters._.computer?igsh=MWN2amZwb2hpNW5zcg==');
+      }
+    });
+
+    // facebook page redirection
+    document.addEventListener("DOMContentLoaded", function () {
+      var facebookLink = document.getElementById('facebook-link');
+      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent)) {
+        // Redirect to Facebook app for mobile users
+        facebookLink.addEventListener('click', function (event) {
+          event.preventDefault();
+          window.location.href = 'fb://page/?id=MastersComputers';
+        });
+      } else {
+        // Redirect to Facebook web for desktop users
+        facebookLink.setAttribute('href', 'https://www.facebook.com/MastersComputers?mibextid=ZbWKwL');
+      }
+    });
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+#slogan {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  position: absolute;
+  color: white;
+  top: 40%;
+  /* Adjust top position as needed */
+  left: 50%;
+  /* Center horizontally */
+  transform: translateX(-50%);
+  /* Center horizontally */
+  font-size: 15px;
+  /* Adjust font size as needed */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 23%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#logo {
+  height: auto;
+  /* Make image responsive */
+  width: 120%;
+  /* Adjust the width relative to its parent container */
+  max-width: 300px;
+  /* Add max-width for responsiveness */
+}
+
+
+
+.firscl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 53%;
+  left: 25%;
+  transform: translateX(-50%);
+}
+
+.secondcl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 53%;
+  left: 68%;
+  transform: translateX(-50%);
+}
+
+body {
+  background: black;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  /* Center align text */
+}
+
+
+a {
+  font-size: 20px;
+  display: inline-block;
+  padding: 15px 15px;
+  /* Adjust padding for better touch interaction */
+  color: #f78b31;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 2px;
+  /* Adjust letter spacing for better readability */
+}
+
+a:hover {
+  background: #f78b31;
+  color: #050801;
+  box-shadow: 0 0 5px #f78b31, 0 0 25px #f78b31, 0 0 50px #f78b31,
+    0 0 200px #f78b31;
+}
+
+.btn {
+  font-weight: bold;
+  font-size: 20px;
+  display: inline-block;
+  padding: 15px 15px;
+  /* Adjust padding for better touch interaction */
+  color: #f78b31;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 2px;
+  /* Adjust letter spacing for better readability */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #f78b31;
+  color: #050801;
+  box-shadow: 0 0 5px #f78b31, 0 0 25px #f78b31, 0 0 50px #f78b31,
+    0 0 200px #f78b31;
+}
