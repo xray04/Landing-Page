@@ -123,11 +123,11 @@
         // Redirect to Facebook app for mobile users
         facebookLink.addEventListener('click', function (event) {
           event.preventDefault();
-          window.location.href = 'fb://page/?id=MastersComputers';
+          window.location.href = 'fb:https://www.facebook.com/MastersComputers';
         });
       } else {
         // Redirect to Facebook web for desktop users
-        facebookLink.setAttribute('href', 'https://www.facebook.com/MastersComputers?mibextid=ZbWKwL');
+        facebookLink.setAttribute('href', 'https://www.facebook.com/MastersComputers');
       }
     });
 
