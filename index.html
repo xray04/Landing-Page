@@ -116,20 +116,14 @@
 
     // facebook page redirection
     document.addEventListener("DOMContentLoaded", function () {
-      var facebookLink = document.getElementById('facebook-link');
-      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  var facebookLink = document.getElementById('facebook-link');
 
-      if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent)) {
-        // Redirect to Facebook app for mobile users
-        facebookLink.addEventListener('click', function (event) {
-          event.preventDefault();
-          window.location.href = 'fb:https://www.facebook.com/MastersComputers';
-        });
-      } else {
-        // Redirect to Facebook web for desktop users
-        facebookLink.setAttribute('href', 'https://www.facebook.com/MastersComputers');
-      }
-    });
+  facebookLink.addEventListener('click', function (event) {
+    event.preventDefault(); // Prevent default link behavior
+    window.location.href = 'https://www.facebook.com/MastersComputers'; // Redirect to Facebook
+  });
+});
+
 
   </script>
 </body>
